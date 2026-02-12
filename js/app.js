@@ -4,20 +4,10 @@ const entryScreen = document.getElementById("entryScreen");
 const desktop = document.getElementById("desktop");
 const modeTitle = document.getElementById("modeTitle");
 
-function enterMode(mode) {
-    entryScreen.classList.add("hidden");
-    desktop.classList.remove("hidden");
-
-    if (mode === "solo") {
-        modeTitle.textContent = "Solo Galentine Mode Activated ✨";
-    } else {
-        modeTitle.textContent = "Besties Galentine Mode Activated 💞";
-    }
+if (soloBtn && bestiesBtn) {
+    soloBtn.addEventListener("click", () => {window.location.href = "../pages/transition.html?mode=solo";});
+    bestiesBtn.addEventListener("click", () => {window.location.href = "../pages/transition.html?mode=besties";});
 }
-
-soloBtn.addEventListener("click", () => enterMode("solo"));
-bestiesBtn.addEventListener("click", () => enterMode("besties"));
-
 let lastSparkleTime = 0;
 
 document.addEventListener("mousemove", (e) => {
@@ -42,3 +32,49 @@ document.addEventListener("mousemove", (e) => {
     setTimeout(() => sparkle.remove(), 900);
 });
 
+// script for transition page
+
+const params = new URLSearchParams(window.location.search);
+const mode = params.get("mode");
+
+window.addEventListener("load", () => {
+    const note = document.getElementById("loadingNote");
+    const bar = document.getElementById("progressBar");
+
+    if (!note || !bar) return;
+
+    const message = 
+    `Great choice!
+    Fetching special ${mode === "solo" ? "Solo Galentine" : "Galentine with besties"} ideas just for you...
+    My special guest ⋆˚✿˖°`;
+
+    // typewriter
+    let i = 0;
+    function typeWriter() {
+        if (i < message.length) {
+            note.textContent += message[i];
+            i++;
+            setTimeout(typeWriter, 40);
+        }
+    }
+
+    // progress bar
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += 1;
+        bar.style.width = progress + "%";
+
+        if (progress === 10) typeWriter();
+
+        if (progress >= 100) {
+            clearInterval(interval);
+
+            setTimeout(() => {
+                window.location.href =
+                    mode === "solo"
+                        ? "../pages/solo.html"
+                        : "../pages/besties.html";
+            }, 800);
+        }
+    }, 55);
+});

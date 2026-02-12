@@ -1,0 +1,66 @@
+.desktop-grid {
+    width: 92%;
+    height: 88vh;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1.2fr 1fr;
+    gap: 30px;
+}
+
+/* generic window style */
+.window {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 25px 60px rgba(104,59,44,0.25);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* positioning in grid */
+.main-content {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.folders {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.quotes {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.music {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* folder list */
+.folder-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.folder-item {
+    padding: 10px;
+    border-radius: 8px;
+    /* background: #f3c1cf; */
+    cursor: url("../img/cursor1.png") 4 4, auto;
+    transition: 0.2s;
+    width: 50px;
+}
+
+.folder-item:hover {
+    transform: scale(1.05);
+    cursor: url("../img/cursor1.png") 4 4, auto;
+}
+
+.file-explorer-folder {
+    width: 50px;
+}

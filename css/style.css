@@ -26,6 +26,13 @@ body {
     position: relative;
 }
 
+.page-wrapper.column {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
 /* push content to top third */
 .entry-screen {
     margin-top: 12vh;
@@ -246,4 +253,79 @@ body {
     background: rgba(255,255,255,0.5);
     backdrop-filter: blur(6px);
     cursor: url("../img/cursor1.png") 4 4, auto;
+}
+
+/* css for the transition page */
+.loading-window {
+    width: 480px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+}
+
+.loading-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.transfer-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.folder {
+    width: 50px;
+}
+
+.transfer-line {
+    width: 120px;
+    height: 2px;
+    border-top: 2px dashed #d581a1;
+    animation: dashMove 1s linear infinite;
+}
+
+@keyframes dashMove {
+    from { background-position: 0 0; }
+    to { background-position: 20px 0; }
+}
+
+.loading-bar {
+    width: 100%;
+    height: 8px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: #f3c1cf;
+    transition: width 0.2s;
+}
+
+.loading-text {
+    font-size: 22px;
+    color: #693B2C;
+    min-height: 60px;
+}
+
+.loading-note {
+    font-family: "Dancing Script", cursive;
+    font-size: 34px;
+    color: #693B2C;
+    text-align: left;
+    width: 600px;
+    line-height: 1.4;
+    white-space: pre-line; /* THIS enables line breaks */
+    margin-top: 10px;
+    margin-left: 10px;
 }
