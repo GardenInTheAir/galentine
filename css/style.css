@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+
+    /* YOUR background image */
+    background: url("../img/bg2.png") repeat center center/cover;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+
+    cursor: url("../img/cursor1.png") 4 4, auto;
+}
+
+* {
+    cursor: url("../img/cursor1.png") 4 4, auto;
+}
+
+.page-wrapper {
+    flex: 1;                      /* takes all available height */
+    display: flex;
+    justify-content: center;      /* horizontal */
+    align-items: center;          /* vertical */
+    position: relative;
+}
+
+/* push content to top third */
+.entry-screen {
+    margin-top: 12vh;
+    text-align: center;
+}
+
+/* cursive title */
+.entry-screen h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 56px;
+    color: rgb(104, 59, 44);
+    margin-bottom: 40px;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+/* retro browser window */
+.entry-card {
+    width: 420px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+.entry-card {
+    width: 420px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 25px 60px rgba(104,59,44,0.45);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #e6a8b7;
+}
+
+/* top browser bar */
+.browser-bar {
+    height: 36px;
+    background: #f3c1cf;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    border: 1px solid #e5aab8;
+}
+
+.browser-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #d581a1;
+    color: #693B2C;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: thin;
+    line-height: 1;
+}
+
+/* .red { background: #ff6b6b; }
+.yellow { background: #ffd93d; }
+.green { background: #6bcf63; } */
+
+.browser-title {
+    font-size: 13px;
+    color: #693B2C;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+/* content area (scrollable like a real window) */
+.browser-content {
+    padding: 25px;
+    max-height: 300px;
+    overflow-y: auto;
+    color: #693B2C;
+}
+
+
+/* content inside window */
+.entry-card h2 {
+    /* font-family: "Dancing Script", cursive; */
+    color: #693B2C;
+    margin-top: 10px;
+    padding: 10px 30px 0;
+    font-weight: 500;
+}
+
+.cursive {
+    font-family: "Dancing Script", cursive;
+    font-size: 26px;
+}
+
+
+.choices {
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.choices button {
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: none;
+    cursor: url("../img/cursor1.png") 4 4, auto;
+    background: #f3c1cf;
+    font-size: 15px;
+    transition: 0.25s;
+    color: #693B2C;
+    font-weight: 500;
+}
+
+.choices button:hover {
+    transform: scale(1.08);
+    background: #ffbfd1;
+    font-family: "Dancing Script", cursive;
+    font-weight: 500;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Welcome popup that comes from the browser */
+.welcome-popup {
+    position: absolute;
+    top: 30vh;
+    width: 580px;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(8px);
+    border-radius: 14px;
+    box-shadow: 0 25px 60px rgba(104,59,44,0.45);
+    padding: 25px 40px;
+    text-align: center;
+    border: 1px solid #e5aab8;
+
+    font-family: "Dancing Script", cursive;
+    font-size: 50px;
+    color: #693B2C;
+
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: popupIn 1s ease forwards, popupOut 1s ease forwards 2.5s;
+}
+
+/* hide the question window at first */
+.entry-card {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: cardAppear 1s ease forwards 3.2s;
+}
+
+/* animations */
+@keyframes popupIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popupOut {
+    to {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+}
+
+@keyframes cardAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sparkle {
+    position: absolute;
+    pointer-events: none;
+    font-size: 14px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgb(241, 95, 120), 0 0 12px white;
+
+    animation: sparkleFloat 0.9s ease-out forwards;
+}
+
+@keyframes sparkleFloat {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-25px) scale(1.8) rotate(20deg);
+    }
+}
+
+.link {
+    color: #693B2C;
+    cursor: url("../img/cursor1.png") 4 4, auto;
+}
+
+.link:hover {
+    cursor: url("../img/cursor1.png") 4 4, auto;
+}
+
+.footer {
+    text-align: center;
+    padding: 8px;
+    font-size: 12px;
+    color: #693B2C;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(6px);
+    cursor: url("../img/cursor1.png") 4 4, auto;
+}
