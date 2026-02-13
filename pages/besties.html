@@ -10,17 +10,118 @@
     
         <link rel="stylesheet" href="../css/style.css" />
         <link rel="stylesheet" href="../css/mainscreen.css" />
+        <link rel="stylesheet" href="../css/mainscreen-besties.css" />
     </head>
     
 <body>
 
-    <div class="page-wrapper">
+    <div class="desktop-page">
+        <div class="row">
+        <!-- MAIN CONTENT WINDOW (45%) -->
+        <div class="window main-content">
+<div class="browser-ui">
 
-    
+    <!-- Tabs row -->
+    <div class="tabs-bar">
+        <div class="tab active">ideas.html</div>
+        <div class="tab">about:galentine</div>
 
-    <script src="../js/app.js"></script>
-
+        <div class="window-actions">
+            <span class="dot">-</span>
+            <span class="dot">&#x25FB</span>
+            <span class="dot">×</span>
+        </div>
     </div>
+
+    <!-- Address row -->
+    <div class="address-bar">
+        <div class="nav-buttons">
+            <span>◀</span>
+            <span>▶</span>
+            <span>⟳</span>
+        </div>
+
+        <div class="search-bar">
+            https://galentine.js/ideas.html
+        </div>
+
+        <div class="right-icons">
+            <span>⚙</span>
+        </div>
+    </div>
+
+</div>
+
+            <div class="browser-content" id="contentArea">
+                Browse content in the file explorer on the side to explore how you can make this day unique and fun !! 
+            </div>
+        </div>
+    
+        <!-- FOLDERS WINDOW (25%) -->
+        <div class="window folders">
+            <div class="browser-bar">
+                <div class="browser-title">file-explorer</div>
+                <div class="browser-buttons">
+                    <span class="dot">-</span>
+                    <span class="dot">&#x25FB</span>
+                    <span class="dot">×</span>
+                </div>
+            </div>
+            <div class="browser-content">
+                <div class="explorer-topbar">
+                    <div id="backButton" class="back-btn hidden">⬅ Back</div>
+                </div>
+                <div class="folder-list"></div>
+            </div>
+        </div>
+        </div>
+
+        <div class="row">
+        <!-- MUSIC WINDOW (40%) -->
+        <div class="window music">
+            <div class="browser-bar">
+                <div class="browser-title">music-player.js</div>
+                <div class="browser-buttons">
+                    <span class="dot">-</span>
+                    <span class="dot">&#x25FB</span>
+                    <span class="dot">×</span>
+                </div>
+            </div>
+
+            <div class="browser-content">
+                <!-- <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4STcxlCkebibm6kcxmeDhn?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0MpmBxL43373EOBY4Oqwwn?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- QUOTES WINDOW (30%) -->
+        <div class="window quotes">
+            <div class="browser-bar">
+                <div class="browser-title">quotes.js</div>
+                <div class="browser-buttons">
+                    <span class="dot">-</span>
+                    <span class="dot">&#x25FB</span>
+                    <span class="dot">×</span>
+                </div>
+            </div>
+
+            <div class="browser-content quote-container">
+                <div class="arrow left" id="prevQuote">❮</div>
+
+                <div class="quote-content">
+                    <p id="quoteText"></p>
+                    <span id="quoteAuthor"></span>
+                </div>
+
+                <div class="arrow right" id="nextQuote">❯</div>
+            </div>
+        </div>
+        </div>
+    
+    </div>
+
+    <script src="../js/mainscreen-besties.js"></script>
+    <script src="../js/app.js"></script>
 
 </body>
 

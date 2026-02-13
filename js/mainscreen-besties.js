@@ -10,21 +10,32 @@ const fileSystem = {
                 json: "../content/decorations.json",
                 icon: "file"
             },
-            "Solo Date": {
-                type: "file",
-                json: "../content/solo-date.json",
-                icon: "file"
+            Activities: {
+                type: "folder",
+                icon: "folder",
+                children: {
+                    "Party Games": {
+                        type: "file",
+                        json: "../content/party-games.json",
+                        icon: "file"
+                    },
+                    "Chill Day": {
+                        type: "file",
+                        json: "../content/chill-day.json",
+                        icon: "file"
+                    }
+                }
             },
             Recipes: {
                 type: "folder",
                 icon: "folder",
                 children: {
-                    drinks: {
+                    Drinks: {
                         type: "file",
                         json: "../content/drinks.json",
                         icon: "file"
                     },
-                    baking: {
+                    Baking: {
                         type: "file",
                         json: "../content/baking.json",
                         icon: "file"
@@ -128,6 +139,7 @@ function renderRecipes(recipes) {
         </div>
     `;
 }
+
 
 async function loadContent(path) {
     const response = await fetch(path);

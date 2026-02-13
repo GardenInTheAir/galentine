@@ -1,0 +1,31 @@
+{
+    "title": "Baking Recipies for Everyone",
+    "p" : "You don't have to be a pro-chef to make these recipes! ",
+    "recipes": [
+        {
+            "name" : "Red Velvet Whoopie Pies",
+            "url" : "https://www.foodnetwork.com/recipes/food-network-kitchen/red-velvet-whoopie-pies-for-two-18064914",
+            "desc" : "An easy small batch dessert"
+        },
+        {
+            "name" : "Chocolate Lava Cakes",
+            "url" : "https://www.foodnetwork.com/recipes/chocolate-lava-cakes-2312421",
+            "desc" : "A very quick and tasty cake to bake"
+        },
+        {
+            "name" : "Valentines Cookie Dough",
+            "url" : "https://www.janespatisserie.com/2026/02/08/valentines-cookie-dough/",
+            "desc" : "The perfect desert for this occasion, with plenty of chocolate and warmth !"
+        },
+        {
+            "name" : "Cupid Cupcakes",
+            "url" : "https://sallysbakingaddiction.com/strawberry-nutella-cupcakes/",
+            "desc" : "The perfect combo, strawberry and chocolate !!"
+        },
+        {
+            "name" : "Champagne Cake Roll",
+            "url" : "https://sallysbakingaddiction.com/champagne-cake-roll/",
+            "desc" : "A light and sparkly celebratory dessert"
+        }
+    ]
+}
