@@ -5,17 +5,17 @@ const fileSystem = {
     root: {
         type: "folder",
         children: {
-            activities: {
+            Decorations: {
                 type: "file",
-                json: "../content/activities.json",
+                json: "../content/decorations.json",
                 icon: "file"
             },
-            partyIdeas: {
+            "Solo Date": {
                 type: "file",
-                json: "../content/party-ideas.json",
+                json: "../content/solo-date.json",
                 icon: "file"
             },
-            recepies: {
+            Recipes: {
                 type: "folder",
                 icon: "folder",
                 children: {
@@ -99,14 +99,59 @@ folders.forEach(folder => {
     });
 });
 
+function renderTitle(title) {
+    return `<h2>${title}</h2>`;
+}
+
+function renderParagraph(text) {
+    return `<p class="content-paragraph">${text}</p>`;
+}
+
+function renderList(items) {
+    return `
+        <ul class="content-list">
+            ${items.map(i => `<li>${i}</li>`).join("")}
+        </ul>
+    `;
+}
+
+function renderRecipes(recipes) {
+    return `
+        <div class="recipes">
+            ${recipes.map(r => `
+                <div class="recipe-card">
+                    <h3>${r.name}</h3>
+                    <p>${r.method}</p>
+                </div>
+            `).join("")}
+        </div>
+    `;
+}
+
+
 async function loadContent(path) {
     const response = await fetch(path);
     const data = await response.json();
 
-    contentArea.innerHTML = `
-        <h2>${data.title}</h2>
-        <p>${data.content.map(item => `${item}</br>`).join("")}</p>
-    `;
+    let html = "";
+
+    if (data.title) {
+        html += renderTitle(data.title);
+    }
+
+    if (data.p) {
+        html += renderParagraph(data.p);
+    }
+
+    if (data.list) {
+        html += renderList(data.list);
+    }
+
+    if (data.recipes) {
+        html += renderRecipes(data.recipes);
+    }
+
+    contentArea.innerHTML = html;
 }
 
 let quotes = [];
@@ -121,7 +166,6 @@ const dotsContainer = document.getElementById("quoteDots");
 async function loadQuotes() {
     const res = await fetch("../content/quotes.json");
     quotes = await res.json();
-    createDots();
     showQuote(0);
 }
 
@@ -132,18 +176,6 @@ function showQuote(index) {
 
     document.querySelectorAll(".quote-dots span").forEach((dot, i) => {
         dot.classList.toggle("active", i === index);
-    });
-}
-
-function createDots() {
-    dotsContainer.innerHTML = "";
-    quotes.forEach((_, i) => {
-        const dot = document.createElement("span");
-        dot.addEventListener("click", () => {
-            currentQuote = i;
-            showQuote(currentQuote);
-        });
-        dotsContainer.appendChild(dot);
     });
 }
 

@@ -1,0 +1,26 @@
+{
+    "title": "Pink drinks to match today's vibe",
+    "p" : "From teas to mocktails to lemonades... I'm sure you'll find something that suits your taste !",
+    "recipes": [
+        {
+            "name" : "Blushing Lemonade",
+            "method" : "Freshly squeezed lemonade, Strawberry juice, and Sparkling water come together in perfect harmony, topped with a splash of agave. Served in a clear cup with a sugar rim and garnished with edible flowers."
+        },
+        {
+            "name" : "XOXO Fizz",
+            "method" : "Indulge in the sweetness of watermelon juice, perfectly balanced with a splash of sprite. Topped with a fluffy cloud of cotton candy, creating a memorizing glitter effect when you push it in. Served in an elegant flute cup."
+        },
+        {
+            "name" : "Sweet Strawberry Tea",
+            "method" : "Lightly mash 1 cup of fresh strawberries to release their juices and put them in a teapot. Add 1 tbsp of dried hibiscus and 1 tbsp of dried spearmint. Pour hot water over the mixture, then cover and steep for 10 minutes. Finally, strain, sweeten with honey, and serve warm or over ice."
+        },
+        {
+            "name" : "Raspberry Mojito",
+            "method" : "Mix lime juice, sparkling water, raspberries, and mint leaves in a glass, then add ice."
+        },
+        {
+            "name" : "Blood Orange & Rosewater",
+            "method" : "Mix rosewater, blood orange juice, lemon juice, and sparkling water in a glass. Then add ice and throw-in a raspberry."
+        }
+    ]
+}

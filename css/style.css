@@ -3,7 +3,6 @@ body {
     height: 100vh;
     font-family: "Segoe UI", sans-serif;
 
-    /* YOUR background image */
     background: url("../img/bg2.png") repeat center center/cover;
 
     display: flex;

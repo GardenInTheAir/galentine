@@ -33,6 +33,10 @@
     .row {
         flex-direction: column;
     }
+    .main-content { width: 100%;}
+    .folders { width: 100%;}
+    .quotes { width: 100%;}
+    .music { width: 100%;}
 }
 
 /* FIRST ROW proportions */
