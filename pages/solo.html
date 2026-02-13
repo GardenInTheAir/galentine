@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="browser-content" id="contentArea">
-                Choose a folder to begin 💗
+                Browse content in the file explorer on the side to explore how you can make this day unique and fun !! 
             </div>
         </div>
     
@@ -35,43 +35,60 @@
         <div class="window folders">
             <div class="browser-bar">
                 <div class="browser-title">file-explorer</div>
-            </div>
-            <div class="browser-content folder-list">
-                <div class="folder-item" data-file="activities">
-                    <img src="../img/folder-icon-pink.png" class="file-explorer-folder">
-                    <span>Activities</span>
+                <div class="browser-buttons">
+                    <span class="dot">-</span>
+                    <span class="dot">&#x25FB</span>
+                    <span class="dot">×</span>
                 </div>
-                <div class="folder-item" data-file="recipies">
-                    <img src="../img/folder-icon-pink.png" class="file-explorer-folder">
-                    <span>Recipies</span>
-                </div>
-                <div class="folder-item" data-file="party-ideas">
-                    <img src="../img/file-icon.png" class="file-explorer-folder">
-                    <span>Party Ideas</span>
-                </div>
-            </div>
-        </div>
-    
-        <!-- QUOTES WINDOW (30%) -->
-        <div class="window quotes">
-            <div class="browser-bar">
-                <div class="browser-title">quotes.js</div>
             </div>
             <div class="browser-content">
-                <div id="quoteSlider">Quote goes here</div>
+                <div class="explorer-topbar">
+                    <div id="backButton" class="back-btn hidden">⬅ Back</div>
+                </div>
+                <div class="folder-list"></div>
             </div>
         </div>
     
+        
         <!-- MUSIC WINDOW (40%) -->
         <div class="window music">
             <div class="browser-bar">
                 <div class="browser-title">music-player.js</div>
+                <div class="browser-buttons">
+                    <span class="dot">-</span>
+                    <span class="dot">&#x25FB</span>
+                    <span class="dot">×</span>
+                </div>
             </div>
+
             <div class="browser-content">
                 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4STcxlCkebibm6kcxmeDhn?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <!-- <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4STcxlCkebibm6kcxmeDhn?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
             </div>
         </div>
+
+        <!-- QUOTES WINDOW (30%) -->
+        <div class="window quotes">
+            <div class="browser-bar">
+                <div class="browser-title">quotes.js</div>
+                <div class="browser-buttons">
+                    <span class="dot">-</span>
+                    <span class="dot">&#x25FB</span>
+                    <span class="dot">×</span>
+                </div>
+            </div>
+
+            <div class="browser-content quote-container">
+                <div class="arrow left" id="prevQuote">❮</div>
+
+                <div class="quote-content">
+                    <p id="quoteText"></p>
+                    <span id="quoteAuthor"></span>
+                </div>
+
+                <div class="arrow right" id="nextQuote">❯</div>
+            </div>
+        </div>
+
     
     </div>
 

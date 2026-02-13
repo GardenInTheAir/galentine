@@ -23,23 +23,91 @@
 .main-content {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    /* min-height: 700px;
+    max-height: 1000px;
+    width: 60%; */
 }
 
-/* .folders {
+.folders {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-} */
-
-.quotes {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    /* min-height: 700px;
+    max-height: 1000px;
+    width: 40%; */
 }
 
 .music {
     background-color: #1F1F1F;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    /* min-height: 352px;
+    max-height: 500px;
+    width: 40%; */
+}
+
+.quotes {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    /* min-height: 352px;
+    max-height: 500px;
+    width: 60%; */
 }
+
+.quote-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+}
+
+.quote-content {
+    flex: 1;
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    color: #693B2C;
+}
+
+#quoteText {
+    font-size: 26px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#quoteAuthor {
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.arrow {
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+    transition: 0.2s;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+/* top dots */
+.quote-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.quote-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e5aab8;
+}
+
+.quote-dots .active {
+    background: #693B2C;
+}
+
 
 .music:hover {
     cursor: url("../img/cursor1.png") 4 4, auto;
@@ -82,4 +150,23 @@
 
 .file-explorer-folder {
     width: 50px;
+}
+/* top bar of file explorer */
+.explorer-topbar {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
+
+/* back button style */
+.back-btn {
+    font-size: 13px;
+    color: #693B2C;
+    cursor: pointer;
+    user-select: none;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
 }
