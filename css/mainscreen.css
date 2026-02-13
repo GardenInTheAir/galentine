@@ -6,6 +6,34 @@
     gap: 60px;
 }
 
+.back-home {
+    position: fixed;
+    top: 18px;
+    left: 22px;
+
+    font-size: 14px;
+    color: #693B2C;
+    text-decoration: none;
+    opacity: 0.7;
+
+    transition: 0.2s;
+    z-index: 999;
+}
+
+.back-home:hover {
+    opacity: 1;
+    transform: translateX(-3px);
+    font-family: "Dancing Script", cursive;
+    font-size: 18px;
+}
+
+/* prevent visited purple / underline */
+.back-home:visited,
+.back-home:active {
+    color: #693B2C;
+    text-decoration: none;
+}
+
 /* each horizontal band */
 .row {
     display: flex;

@@ -122,7 +122,7 @@ function renderRecipes(recipes) {
                 <div class="recipe-card">
                     <h4>${r.name}</h4>
                     <p>${r.desc || r.method}</p>
-                    ${r.url ? `<a href="${r.url}" style="color: #693b2c; font-size: 12px;" target="_blank">Check the recipe link!</a>` : ""}
+                    ${r.url ? `<a href="${r.url}" style="color: #693b2c; font-size: 12px;" target="_blank">Check the full recipe here!</a>` : ""}
                 </div>
             `).join("")}
         </div>

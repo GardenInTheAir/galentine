@@ -45,7 +45,7 @@ window.addEventListener("load", () => {
 
     const message = 
     `Great choice!
-    Fetching special ${mode === "solo" ? "Solo Galentine" : "Galentine with besties"} ideas just for you...
+    Fetching special ${mode === "solo" ? "'Solo Galentine'" : "'Galentine with besties'"} ideas just for you...
     My special guest ⋆˚✿˖°`;
 
     // typewriter
