@@ -176,7 +176,7 @@ const nextBtn = document.getElementById("nextQuote");
 const dotsContainer = document.getElementById("quoteDots");
 
 async function loadQuotes() {
-    const res = await fetch("../content/quotes.json");
+    const res = await fetch("../content/quotes-besties.json");
     quotes = await res.json();
     showQuote(0);
 }
